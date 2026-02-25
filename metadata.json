@@ -1,0 +1,5 @@
+{
+  "name": "Gerenciador de Ideias",
+  "description": "Um aplicativo para registrar novas ideias e alterar seu status quando executadas.",
+  "requestFramePermissions": []
+}

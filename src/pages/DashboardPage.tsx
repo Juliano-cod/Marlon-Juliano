@@ -17,9 +17,10 @@ export default function DashboardPage({ ideas }: DashboardPageProps) {
     return acc;
   }, {} as Record<IdeaStatus, number>);
 
-  const chartData = Object.entries(statusCounts).map(([name, value]) => ({
-    name,
-    value,
+  // Ensure all statuses are present in chartData even if count is 0
+  const chartData = Object.values(IdeaStatus).map((status) => ({
+    name: status,
+    value: statusCounts[status] || 0,
   }));
 
   return (
